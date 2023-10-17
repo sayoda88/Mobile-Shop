@@ -1,0 +1,36 @@
+/* header
+{
+    height: 70vh;
+    background: linear-gradient(90deg , #b06afe , #40a6ff);
+} */
+.side-header
+/* {
+     background-image: url(assets/home/sphere.png); 
+    background-size: cover;
+} */
+
+/* .log-btn{
+    padding: 1.3rem;
+     margin: 1.5rem; 
+    border-radius: 10px;
+     width: 25% ; 
+    font-weight: 400;
+    background-color: #e3e3e3;
+} */
+
+.heading-login {
+    color: #1A998E;
+}
+
+.log-btn {
+    width: 100%;
+    padding: 4px;
+    background-color: #1A998E;
+    color: #FFFFFF;
+     font-size: 18px; 
+    font-weight: 600; 
+}
+
+.secondHome {
+    padding-bottom: 18rem;
+}

@@ -1,0 +1,51 @@
+<div class="container">
+    <h2 class="display-5 text-center headColor">Welcome To Our Cashier System </h2>
+    <form [formGroup]="cashier" (ngSubmit)="addProduct(cashier)">
+        <label class="headColor fw-bold">Receipt ID :</label>
+        <input formControlName="id" type="text" id="ReceiptInput" class="my-2 form-control">
+
+        <label class="headColor fw-bold">Emp ID :</label>
+        <input formControlName="empId" type="text" id="empInput" class="my-2 form-control">
+
+        <label class="headColor fw-bold">Customer Name:</label>
+        <input formControlName="customerName" type="text" id="CustomerInput" class="my-2 form-control">
+
+        <label class="headColor fw-bold">Price :</label>
+        <input formControlName="price" type="text" id="PriceInput" class="my-2 form-control">
+
+        <label class="headColor fw-bold ">Quantity :</label>
+        <input formControlName="quantity" type="number" id="QuantityInput" class="my-2 form-control">
+        <label class="headColor fw-bold">Type :</label>
+        <!-- <textarea id="typeInput" class="my-2 form-control"> </textarea> -->
+        <select formControlName="type" id="typeInput" class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="refund">refund</option>
+            <option value="cash">cash</option>
+        </select>
+
+        <button type="submit" id="addBtn" class="btn btn-success my-2">Add Product</button>
+    </form>
+</div>
+
+<div class="container mt-5">
+    <table class="table text-center">
+        <thead>
+            <th class="headColor fw-bold ">Receipt ID</th>
+            <th class="headColor fw-bold ">Customer Name</th>
+            <th class="headColor fw-bold ">Price</th>
+            <th class="headColor fw-bold ">Quantity</th>
+            <th class="headColor fw-bold ">type</th>
+            <th class="headColor fw-bold ">Print</th>
+            <th class="headColor fw-bold ">Delete</th>
+        </thead>
+        <tbody *ngFor="let ca of cashierContainer" id="tableBody">
+            <td>{{ca.id}}</td>
+            <td>{{ca.empId}}</td>
+            <td>{{ca.customerName}}</td>
+            <td>{{ca.quantity}}</td>
+            <td>{{ca.id}}</td>
+            <td><button (click)="navRece()" class="btn btn-warning fw-bold"> Print</button></td>
+            <td><button class="btn btn-danger fw-bold"> Delete</button></td>
+        </tbody>
+    </table>
+</div>

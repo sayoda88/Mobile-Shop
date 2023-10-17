@@ -1,0 +1,66 @@
+<!-- <div class="w-50 py-5 m-auto">
+               
+    <h2 class="text-center bg-info py-3 my-3 text-light"> Search For Your device </h2>
+    <input keyup="searchProducts(this.value)" placeholder="search here by productName ..."  class="form-control" type="text">
+         <div id="searchResults" class=" w-100 p-3"></div>
+ </div> -->
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table text-dark bg-light">
+                <thead>
+                    <tr>
+                        <th class="headColor fw-bold ">No.</th>
+                        <th class="headColor fw-bold ">Mobile ID </th>
+                        <th class="headColor fw-bold ">Name</th>
+                        <th class="headColor fw-bold ">Image</th>
+                        <th class="headColor fw-bold ">Av. Quantity</th>
+                        <th class="headColor fw-bold ">Price in USD</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr *ngFor="let prd of prdListOfCat;let i =index">
+                        <td class="fw-bold">{{i+1}}</td>
+                        <td class="fw-bold">{{prd.id}}</td>
+                        <td class="fw-bold">{{prd.name}}</td>
+                        <td class="fw-bold"><img [src]="prd.imgURL" alt="img">
+                            <!-- <img [LightBox]="ReadFromPropInTS" [src]="prd.imgURL" alt="img"> -->
+                        </td>
+                        <td class="fw-bold">{{prd.quantity}}</td>
+                        <td class="fw-bold">{{prd.price | currency:'USD'}}</td>
+                        <!-- Template ref Var -->
+                        <!-- <td><input #itemCount class="form-control" type="number"></td> -->
+                        <!--<td><button type="button" class="btn btn-secondary" (click)="openPrdDetails(prd.id)">Details</button></td>-->
+                        <!-- <td><a  class="btn btn-success" [routerLink]="['/Products',prd.id]"  role="button">Details</a></td> -->
+                        <!-- <td><button type="button" class="btn btn-secondary" (click)="buy(prd.price,itemCount.value)">AddToCart</button></td> -->
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <div class="w-75 py-5 m-auto">
+                <h2 class="text-center bg-light py-3 my-3 text-success"> Search For Your device </h2>
+                <form [formGroup]="searchMobile" (ngSubmit)="search(searchMobile)">
+                    <div class="row py-3">
+                        <div class="col-md-6">
+                            <label class="text-success" for="z">Mobile ID :</label>
+                            <input formControlName="mobileId" placeholder="Enter mobile ID" class="form-control" type="text">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="text-success" for="z">Branch ID :</label>
+                            <input formControlName="branchId" placeholder="Enter branch ID" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <button class="btn btn-success" type="submit"> Search </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

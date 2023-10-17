@@ -1,0 +1,53 @@
+<header class="secondHome" [ngStyle]="{'background': 'url(' + backgroundUrl + ') no-repeat 0 0 / cover'}">
+<div class="container">
+    <div  class="row">
+        <section class="text-center" >
+            <h1 class="display-4 headColor py-5"> Your receipt </h1>
+            <div class="offset-3 col-md-6">
+                <div class="row">
+                    <div class="col-md-3 py-3">
+                        <h4 class="headColor fw-bold">Receipt ID :</h4>
+                    </div>
+                    <div class="col-md-3 py-3">
+                        <p class="fs-4">{{x.id}}</p>
+                    </div>
+                    <div class="col-md-3 py-3">
+                        <h4 class="headColor fw-bold">Emp ID :</h4>
+                    </div>
+                    <div class="col-md-3 py-3">
+                        <p class="fs-4">{{x.empId}}</p>
+                    </div>
+                    <div class="col-md-3 py-3">
+                        <h4 class="headColor fw-bold">Customer Name:</h4>
+                    </div>
+                    <div class="col-md-3 py-3">
+                        <p class="fs-4">{{x.customerName}}</p>
+                    </div>
+                    <div class="col-md-3 py-3">
+                        <h4 class="headColor fw-bold">Price :</h4>
+                    </div>
+                    <div class="col-md-3 py-3">
+                        <p class="fs-4">{{x.price}}</p>
+                    </div>
+                    <div class="col-md-3 py-3">
+                        <h4 class="headColor fw-bold">Quantity :</h4>
+                    </div>
+                    <div class="col-md-3 py-3">
+                        <p class="fs-4">{{x.quantity}}</p>
+                    </div>
+                    <div class="col-md-3 py-3">
+                        <h4 class="headColor fw-bold">Type :</h4>
+                    </div>
+                    <div class="col-md-3 py-3">
+                        <p class="fs-4">{{x.type}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</header>
+<!-- <p>{{x.empId}}</p>
+<p>{{x.customerName}}</p>
+<p>{{x.quantity}}</p>
+<p>{{x.type}}</p> -->
